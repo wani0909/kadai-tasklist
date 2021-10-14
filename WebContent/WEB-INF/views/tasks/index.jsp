@@ -7,7 +7,7 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>メッセージ一覧</h2>
+        <h2>リスト一覧</h2>
         <ul>
             <c:forEach var="tasklist" items="${tasks}">
                 <li>
@@ -20,8 +20,8 @@
         </ul>
 
         <div id="pagination">
-            （全 ${messages_count} 件）<br />
-            <c:forEach var="i" begin="1" end="${((messages_count - 1) / 15) + 1}" step="1">
+            （全 ${tasks_count} 件）<br />
+            <c:forEach var="i" begin="1" end="${((tasks_count - 1) / 15) + 1}" step="1">
                 <c:choose>
                     <c:when test="${i == page}">
                         <c:out value="${i}" />&nbsp;
@@ -33,7 +33,7 @@
             </c:forEach>
         </div>
 
-        <p><a href="${pageContext.request.contextPath}/new">新規メッセージの投稿</a></p>
+        <p><a href="${pageContext.request.contextPath}/new">やることリストの作成</a></p>
 
     </c:param>
 </c:import>

@@ -23,7 +23,6 @@ public class TasklistValidator {
         return errors;
     }
 
-    // タイトルの必須入力チェック
     private static String validateTitle(String title) {
         if(title == null || title.equals("")) {
             return "タイトルを入力してください。";
@@ -32,10 +31,9 @@ public class TasklistValidator {
         return "";
     }
 
-    // メッセージの必須入力チェック
     private static String validateContent(String content) {
         if(content == null || content.equals("")) {
-            return "メッセージを入力してください。";
+            return "内容を入力してください。";
         }
 
         return "";
