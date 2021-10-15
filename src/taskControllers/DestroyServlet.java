@@ -37,10 +37,10 @@ public class DestroyServlet extends HttpServlet {
 
             Tasklist t = em.find(Tasklist.class, (Integer)(request.getSession().getAttribute("tasklist_id")));
 
+
             em.getTransaction().begin();
             em.remove(t);
             em.getTransaction().commit();
-            request.getSession().setAttribute("flush", "削除が完了しました。");
             em.close();
 
             request.getSession().removeAttribute("tasklist_id");
