@@ -13,7 +13,7 @@
                             <td><c:out value="${tasklist.title}" /></td>
                         </tr>
                         <tr>
-                            <th>メッセージ</th>
+                            <th>内容</th>
                             <td><c:out value="${tasklist.content}" /></td>
                         </tr>
                         <tr>
